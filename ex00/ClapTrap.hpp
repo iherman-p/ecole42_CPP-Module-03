@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 15:44:53 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 18:02:32 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:02:53 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ class ClapTrap
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &to_cpy);
 		~ClapTrap();
-		void	Attack(const std::string &target);
-		void	takeDamage(int amount);
-		void	beRepaired(int amount);
+	
+		ClapTrap&	operator=(const ClapTrap& to_cpy);
+		
+		void		Attack(const std::string &target);
+		void		takeDamage(int amount);
+		void		beRepaired(int amount);
 };
 
 #endif // CLAPTRAP_HPP

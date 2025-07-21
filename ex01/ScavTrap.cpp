@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:27:30 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 17:49:18 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:01:32 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,11 @@ void	ScavTrap::Attack(const std::string &target)
 void	ScavTrap::guardGate()
 {
 	std::cout << name << " has entered GATE KEEPER MODE! >:O" << std::endl;
+}
+
+ScavTrap&	ScavTrap::operator=(const ScavTrap& to_cpy)
+{
+	if (this != &to_cpy)
+		ClapTrap::operator=(to_cpy);
+	return *this;
 }

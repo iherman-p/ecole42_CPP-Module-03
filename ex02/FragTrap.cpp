@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:27:30 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 18:14:49 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:03:56 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,11 @@ void	FragTrap::Attack(const std::string &target)
 void	FragTrap::highFivesGuys()
 {
 	std::cout << name << " extends their hand to give everybody a high five >:)" << std::endl;
+}
+
+FragTrap&	FragTrap::operator=(const FragTrap& to_cpy)
+{
+	if (this != &to_cpy)
+		ClapTrap::operator=(to_cpy);
+	return *this;
 }

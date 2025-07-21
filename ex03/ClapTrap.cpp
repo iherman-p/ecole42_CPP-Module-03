@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 15:44:56 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 17:41:04 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:04:13 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,15 @@ void	ClapTrap::beRepaired(int amount)
 	}
 	else
 		std::cout << name << " tried to repair, but failed. :(" << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& to_cpy)
+{
+	if (this == &to_cpy)
+		return *this;
+	this->atk_dmg = to_cpy.atk_dmg;
+	this->ep = to_cpy.ep;
+	this->hp = to_cpy.hp;
+	this->name = to_cpy.name;
+	return *this;
 }

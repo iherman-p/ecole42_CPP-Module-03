@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:27:28 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 18:03:30 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:02:42 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class ScavTrap : public ClapTrap
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &to_cpy);
 		virtual	~ScavTrap();
+
+		ScavTrap&		operator=(const ScavTrap& to_cpy);
+		
 		virtual void	Attack(const std::string &target);
 		void			guardGate();
 };

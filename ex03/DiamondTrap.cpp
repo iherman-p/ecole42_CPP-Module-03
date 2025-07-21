@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 18:18:56 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 18:54:14 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:07:23 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,14 @@ void	DiamondTrap::Attack(const std::string &target)
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "Who am i...?\nI must be " << ScavTrap::name << "\nno.. I'm " << this->name << std::endl;
+}
+
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& to_cpy)
+{
+	if (this != &to_cpy)
+	{
+		ClapTrap::operator=(to_cpy);
+		DiamondTrap::name = to_cpy.DiamondTrap::name;
+	}
+	return (*this);
 }
