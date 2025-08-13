@@ -6,22 +6,22 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 18:18:56 by iherman-          #+#    #+#             */
-/*   Updated: 2025/08/13 15:12:03 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:50:43 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap(std::string new_name, std::string clap_name) :
-	ClapTrap(clap_name),
-	ScavTrap(clap_name),
-	FragTrap(clap_name)
+DiamondTrap::DiamondTrap(std::string new_name) :
+	ClapTrap(new_name + "_clap_name"),
+	ScavTrap(new_name),
+	FragTrap(new_name)
 {
-	std::cout << "DiamondTrap spawned with default constructor: " << new_name << ", " << clap_name << std::endl;
+	std::cout << "DiamondTrap spawned with default constructor: " << new_name << std::endl;
 	DiamondTrap::name = new_name;
 	hp = 100;
-	ep = 100;
+	ep = 50;
 	atk_dmg = 30;
 }
 
@@ -62,4 +62,5 @@ void	DiamondTrap::whoAmI()
 		std::cout << "Who am i...? I must be " << ScavTrap::name << ". No, wait, I'm " << this->name << '\n';
 		ep--;
 	}
+	std::cout << std::endl;
 }

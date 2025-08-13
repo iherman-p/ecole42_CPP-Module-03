@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:26:53 by iherman-          #+#    #+#             */
-/*   Updated: 2025/08/12 17:25:26 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:58:43 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	main()
 {
-	DiamondTrap	deeter("Deeter", "Peter");
-	DiamondTrap	doe("Doe", "Joe");
+	DiamondTrap	deeter("Deeter");
+	DiamondTrap	doe("Doe");
 	DiamondTrap	*deeter_clone;
 
 	deeter_clone = new DiamondTrap(deeter);
@@ -25,20 +25,14 @@ int	main()
 
 	deeter_clone->beRepaired(14);
 	delete deeter_clone;
-
-	std::cout << '\n';
 	
 	doe.attack("Deeter");
 	deeter.attack("Doe");
 
-	std::cout << '\n';
-
 	doe.beRepaired(100);
-	deeter.beRepaired(-20); //big problem
+	deeter.beRepaired(20);
 
-	std::cout << '\n';
-
-	doe.takeDamage(-14);
+	doe.takeDamage(14);
 	deeter.takeDamage(4800000);
 
 	doe.whoAmI();

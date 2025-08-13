@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:26:53 by iherman-          #+#    #+#             */
-/*   Updated: 2025/08/13 15:05:57 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 16:03:32 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int	main()
 	std::cout << '\n';
 
 	scoe.beRepaired(100);
-	sceeter.beRepaired(-20);
+	sceeter.beRepaired(20);
 
 	std::cout << '\n';
 
-	scoe.takeDamage(-14);
+	scoe.takeDamage(14);
 	sceeter.takeDamage(4800000);
 
 	scoe.guardGate();
