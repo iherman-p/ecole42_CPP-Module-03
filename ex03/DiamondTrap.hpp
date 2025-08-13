@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 18:18:54 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/21 16:05:46 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:12:11 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		DiamondTrap&	operator=(const DiamondTrap& to_cpy);
 
-		virtual void	Attack(const std::string &target);
 		void			whoAmI();
 };
 

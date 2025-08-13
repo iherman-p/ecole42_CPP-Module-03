@@ -6,14 +6,14 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:14:32 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/21 16:03:24 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 14:55:19 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
+
+#include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap
 
 		FragTrap&		operator=(const FragTrap& to_cpy);
 		
-		virtual void	Attack(const std::string &target);
+		virtual void	attack(const std::string &target);
 		void			highFivesGuys();
 };
 

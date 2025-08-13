@@ -6,14 +6,14 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 16:27:28 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/21 16:05:06 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:12:59 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
+
+#include "ClapTrap.hpp"
 
 class ScavTrap : virtual public ClapTrap
 {
@@ -25,7 +25,7 @@ class ScavTrap : virtual public ClapTrap
 
 		ScavTrap&		operator=(const ScavTrap& to_cpy);
 
-		virtual void	Attack(const std::string &target);
+		virtual void	attack(const std::string &target);
 		void			guardGate();
 };
 

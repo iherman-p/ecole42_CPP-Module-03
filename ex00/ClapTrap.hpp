@@ -6,14 +6,14 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 15:44:53 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/21 16:02:53 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 14:55:08 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
+#include <string>
 
 class ClapTrap
 {
@@ -29,9 +29,9 @@ class ClapTrap
 	
 		ClapTrap&	operator=(const ClapTrap& to_cpy);
 		
-		void		Attack(const std::string &target);
-		void		takeDamage(int amount);
-		void		beRepaired(int amount);
+		void		attack(const std::string &target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
 };
 
 #endif // CLAPTRAP_HPP

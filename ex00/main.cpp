@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:26:53 by iherman-          #+#    #+#             */
-/*   Updated: 2025/07/08 17:39:55 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 15:02:18 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,18 @@ int	main()
 
 	std::cout << '\n';
 	
-	joe.Attack("Peter");
-	peter.Attack("Joe");
+	joe.attack("Peter");
+	peter.attack("Joe");
 
 	std::cout << '\n';
 	
 	joe.beRepaired(100);
-	peter.beRepaired(-20);
+	peter.beRepaired(20);
 
 	std::cout << '\n';
 	
-	joe.takeDamage(-14);
+	joe.takeDamage(900000);
+	joe.beRepaired(1);
 	peter.takeDamage(4800000);
+	peter.attack("Joe");
 }
